@@ -1,0 +1,22 @@
+{
+  "name": "react-portfolio-ga",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChickenChamp71/react-portfolio-ga.git"
+  },
+  "author": "ChickenChamp71",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChickenChamp71/react-portfolio-ga/issues"
+  },
+  "homepage": "https://github.com/ChickenChamp71/react-portfolio-ga#readme",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
