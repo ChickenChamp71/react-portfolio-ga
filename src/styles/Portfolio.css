@@ -1,0 +1,17 @@
+:root {
+    --text-color: #F4FFEF;
+    --border: #284220;
+}
+
+.port-body {
+    margin: 4% 5% 4% 5%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px #0E2107;
+    padding: 2% 1% 0% 1%;
+    height: 70%;
+    background-color: #0E2107;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-height: 60vh;
+}

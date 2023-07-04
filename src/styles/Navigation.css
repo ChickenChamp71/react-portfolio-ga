@@ -1,0 +1,36 @@
+:root {
+    --text-color: #F4FFEF;
+    --hover-color: #9DA799;
+    --back-color: #39592E;
+}
+
+.head {
+    display: flex;
+    background-color: var(--back-color);
+    padding: 2% 1% 2% 1%;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.nav-options {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px;
+}
+
+.nav-options li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 200%;
+    padding: 1vw;
+}
+
+.nav-options li a:hover {
+    animation-name: option-hover;
+    animation-duration: 0.5s;
+}
+
+@keyframes option-hover {
+    from {color: var(--text-color)}
+    to {color: var(--hover-color)}
+}
