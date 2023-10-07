@@ -1,46 +1,40 @@
 import React from 'react';
-import Title from './Title';
 import '../styles/Navigation.css';
 
-function Navigation({ currentPage, handlePageChange }) {
+export default function Navigation({  handlePageChange, notifState }) {
 
     return (
-        <header className='head'>
-            <Title />
+        <header className={`header ${notifState? 'dialog' : ''}`}>
             <nav className='nav-bar'>
                 <ul className='nav-options'>
-                    <li id='about-me'>
+                    <li className='about-header'>
                         <a
                             href='#about-me'
-                            onClick={() => handlePageChange('AboutMe')}
-                            className={currentPage === 'AboutMe' ? 'nav-link-active' : 'nav-link'}
+                            onClick={() => handlePageChange('Main')}
                         >
                             About Me
                         </a>
                     </li>
-                    <li id='portfolio'>
+                    <li id='portfolio-header'>
                         <a
                             href='#portfolio'
-                            onClick={() => handlePageChange('Portfolio')}
-                            className={currentPage === 'Portfolio' ? 'nav-link-active' : 'nav-link'}
+                            onClick={() => handlePageChange('Main')}
                         >
                             Portfolio
                         </a>
                     </li>
-                    <li id='contact'>
+                    <li id='contact-header'>
                         <a
                             href='#contact'
-                            onClick={() => handlePageChange('Contact')}
-                            className={currentPage === 'Contact' ? 'nav-link-active' : 'nav-link'}
+                            onClick={() => handlePageChange('Main')}
                         >
                             Contact
                         </a>
                     </li>
-                    <li id='resume'>
+                    <li id='resume-header'>
                         <a
                             href='#resume'
                             onClick={() => handlePageChange('Resume')}
-                            className={currentPage === 'Resume' ? 'nav-link-active' : 'nav-link'}
                         >
                             Resume
                         </a>
@@ -51,5 +45,3 @@ function Navigation({ currentPage, handlePageChange }) {
         
     )
 };
-
-export default Navigation;
