@@ -1,24 +1,30 @@
 import React from 'react';
 import '../styles/Footer.css';
-import githubImg from "../styles/imgs/github-logo.png";
-import linkedInImg from "../styles/imgs/linkedin-logo.png";
-import twtImg from "../styles/imgs/twt-logo.png";
 
 function Footer() {
 
     return (
         <footer className="footer">
-            <a href="http://github.com/chickenchamp71" id="github-back">
-                <img className="github-img" src={githubImg} alt="Link to Gabriel's Github" />
-            </a>
-            <a href="https://www.linkedin.com/">
-                <img className="linkedin-img" src={linkedInImg} alt="Link to Gabriel's LinkedIn" />
-            </a>
-            <a href="https://twitter.com/ChickenChamp71">
-                <img className="twitter-img" src={twtImg} alt="Link to Gabriel's Twitter" />
-            </a>
+            
+            <p className='footer-email'>
+                gabrielandersondev@gmail.com
+            </p>
+
+            <p className='footer-github'>
+                <a href='https://github.com/GabrielAndersonDev' rel='noreferrer' target='_blank'>
+                    GitHub
+                </a>
+            </p>
+
+            <p className='footer-phone'>
+                (425) 301 - 5163
+            </p>
+
+            <p className='footer-copyright'>
+                © Gabriel Anderson 2023
+            </p>
         </footer>
-    )
+    );
 };
 
 export default Footer;
