@@ -1,10 +1,10 @@
 import React from 'react';
 import '../styles/Navigation.css';
 
-export default function Navigation({  handlePageChange, notifState }) {
+export default function Navigation({  handlePageChange, notifState, isVisible }) {
 
     return (
-        <header className={`header ${notifState? 'dialog' : ''}`}>
+        <header className={`navigation ${notifState? 'dialog' : ''} ${isVisible? 'header' : 'not-header'}`}>
             <nav className='nav-bar'>
                 <ul className='nav-options'>
                     <li className='about-header'>

@@ -58,7 +58,7 @@ export default function Contact({ handleFailState, handleSuccessState, notifStat
             setNameErr('');
             setErr(prevState => ({
                 ...prevState,
-                name: true
+                name: false
             }));
             setRedName(false);
         };
@@ -84,7 +84,7 @@ export default function Contact({ handleFailState, handleSuccessState, notifStat
             setEmailErr('');
             setErr(prevState => ({
                 ...prevState,
-                email: true
+                email: false
             }));
             setRedEmail(false);
         };
@@ -103,7 +103,7 @@ export default function Contact({ handleFailState, handleSuccessState, notifStat
             setSubjectErr('');
             setErr(prevState => ({
                 ...prevState,
-                subject: true
+                subject: false
             }));
             setRedSubject(false);
         };
@@ -122,7 +122,7 @@ export default function Contact({ handleFailState, handleSuccessState, notifStat
             setMessageErr('');
             setErr(prevState => ({
                 ...prevState,
-                message: true
+                message: false
             }));
             setRedMessage(false);
         };
@@ -132,7 +132,17 @@ export default function Contact({ handleFailState, handleSuccessState, notifStat
 
         e.preventDefault();
 
+        console.log('handle sub')
+
         if (!errTrue.name && !errTrue.email && !errTrue.subject && !errTrue.message) {
+
+            console.log('chekc 1 2 3')
+
+            var xml = new XMLHttpRequest();
+            
+            xml.open("POST", "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf1XaEdUL4RVONh9bzPDyq3GoOmiXB1PeoUXlez5gtcMBqt1A/formResponse")
+            
+            xml.send(JSON.stringify({ name: 'entry.1560707200', value: name }, { name: 'entry.547367803', value: email }, { name: 'entry.1792417998', value: subject }, { name: 'entry.73408052', value: message }));
 
             setName('');
             setEmail('');
@@ -166,12 +176,14 @@ export default function Contact({ handleFailState, handleSuccessState, notifStat
 
     return (
 
-        <section className='contact'>
+        <section className='contact'id="contact">
 
-            <h2>Contact</h2>
+            <h2 className="subtitle">
+                Contact
+            </h2>
 
             <div className='contact-container'>
-                <form action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSf1XaEdUL4RVONh9bzPDyq3GoOmiXB1PeoUXlez5gtcMBqt1A/formResponse' method='post'>
+                <form className="form-contact">
                 
                     <input 
                         value={name}
@@ -184,12 +196,70 @@ export default function Contact({ handleFailState, handleSuccessState, notifStat
                     />
                     {nameErr && (
                         <div className='err-or-div' id='id-name-err'>
-                            
+                            <p className="error-text" id="name-err">
+                                {nameErr}
+                            </p>
                         </div>
                     )}
 
+                    <input
+                        value={email}
+                        type="email"
+                        placeholder="Email"
+                        name="entry.547367803"
+                        onBlur={handleEmailErr}
+                        onChange={handleInputChange}
+                        className={`email-input input-border ${redEmail? 'red' : 'not-red'} ${notifState? 'dialog' : ''}`}
+                    />
+                    {emailErr && (
+                        <div className="err-or-div" id="id-email-err">
+                            <p className="error-text" id="email-err">
+                                {emailErr}
+                            </p>
+                        </div>
+                    )}
+
+                    <input
+                        value={subject}
+                        type="text"
+                        placeholder="Subject"
+                        name="entry.1792417998"
+                        onBlur={handleSubjectErr}
+                        onChange={handleInputChange}
+                        className={`subject-input input-border ${redSubject? 'red' : 'not-red'} ${notifState? 'dialog' : ''}`}
+                    />
+                    {subjectErr && (
+                        <div className="err-or-div" id="id-subject-err">
+                            <p className="error-text" id="subject-err">
+                                {subjectErr}
+                            </p>
+                        </div>
+                    )}
+
+                    <input
+                        value={message}
+                        type="text"
+                        placeholder="Message"
+                        name="entry.73408052"
+                        onBlur={handleMessageErr}
+                        onChange={handleInputChange}
+                        className={`message-input input-border ${redMessage? 'red' : 'not-red'} ${notifState? 'dialog' : ''}`}
+                    />
+                    {messageErr && (
+                        <div className="err-or-div" id="id-message-err">
+                            <p className="error-text" id="message-err">
+                                {messageErr}
+                            </p>
+                        </div>
+                    )}
+
+                    <button type="submit" onClick={handleFormSubmit} className={`submit-btn ${notifState? 'dialog' : ''}`}>
+                        Submit
+                    </button>
+
                 </form>
+
             </div>
         </section>
-    )
-}
+    );
+};

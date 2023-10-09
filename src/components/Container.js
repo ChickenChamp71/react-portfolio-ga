@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Main from "./pages/Main";
 import Resume from "./pages/Resume";
 import Navigation from "./Navigation";
@@ -12,6 +12,7 @@ export default function Container() {
     const [notifSuccessState, setNotifSuccessState] = useState(false);
     const [notifState, setNotifState] = useState(false);
     const [open, setOpen] = useState(false);
+    const [isVisible, setVisible] = useState(true);
 
     const handlePageChange = (page) => setCurrentPage(page);
 
@@ -41,7 +42,7 @@ export default function Container() {
             return <Resume />
         }
 
-        return <Main handleFailState={handleFailState} handleSuccessState={handleSuccessState} notifState={notifState} />
+        return <Main handleFailState={handleFailState} handleSuccessState={handleSuccessState} notifState={notifState} checkVisibility={checkVisibility} />
 
     };
 
@@ -67,6 +68,17 @@ export default function Container() {
             return;
         }
         setNotifState(false);
+    }
+
+    const checkVisibility = (visible) => {
+
+        if (!visible === isVisible) {
+
+            setVisible(visible);
+            return;
+        }
+
+        return;
     }
 
     return (
@@ -148,7 +160,7 @@ export default function Container() {
             </nav>
 
             <div className="page-render">
-                <Navigation notifState={notifState} handlePageChange={handlePageChange()} />
+                <Navigation notifState={notifState} handlePageChange={handlePageChange} isVisible={isVisible} />
                 {renderPage()}
             </div>
 
