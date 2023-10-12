@@ -5,18 +5,22 @@ html {
 
 :root {
     --font-style: 'Atkinson Hyperlegible', sans-serif;
-    --purple: #371B2F;
-    --bg-color: #302951;
-    --front-bg: #3F508D;
-    --main-font: #E1E8F4;
-    --div-color: #96ACB7;
-    --nav-color: #E3EED3;
-    --card-title: #BDD699;
-    --text-box-bg: #F3F6F7;
-    --text-box-font: #302951;
-    --submit-btn: #36558F;
-    --drop-menu-line: #7A9454;
-    --drop-menu-div: #40376E;
+    --bg-color: #191919;
+    --front-bg: #28282D;
+    --main-font: #A2C4FF;
+    --div-color: #BBD9E8;
+    --nav-color: #ECF3FF;
+    --card-bg: #45454E;
+    --input-bg: #F3F6F7;
+    --input-text: #302951;
+    --error-text: #FFC4C4;
+    --btn-bg: #36558F;
+}
+
+.body {
+    background-color: var(--front-bg);
+    height: fit-content;
+    width: 1300px;
 }
 
 dialog {
@@ -33,6 +37,8 @@ dialog.notif-success.inactive {
 dialog.notif-fail.active,
 dialog.notif-success.active {
     display: block;
-    
+}
 
+.mobile-dropdown-nav {
+    display: none;
 }

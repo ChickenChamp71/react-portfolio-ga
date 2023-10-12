@@ -1,5 +1,35 @@
+main {
+    padding: 70px;
+}
+
 h1 {
-    color: #FFFFFF;
-    font-size: 250%;
-    font-family: 'Atkinson Hyperlegible', sans-serif;
+    color: var(--main-font);
+    font-size: 140px;
+    text-align: center;
+    line-height: 120px;
+}
+
+hr {
+    width: 957px;
+    border-color: var(--div-color);
+    border-width: 2px;
+    margin-top: 15px;
+}
+
+.p-center-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-me-p {
+    font-size: 24px;
+    margin: 17px 0px 8px 0px;
+    width: 876px;
+    color: var(--main-font);
+    line-height: 30px;
+}
+
+#about-p-2 {
+    margin: 8px 0px 8px 0px;
 }

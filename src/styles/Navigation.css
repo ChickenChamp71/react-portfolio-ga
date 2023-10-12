@@ -1,0 +1,17 @@
+.nav-options {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0px 17px 0px;
+}
+
+.nav-options li a {
+    font-size: 40px;
+    text-decoration: none;
+    color: var(--nav-color);
+}
+
+#about-header,
+#portfolio-header,
+#contact-header {
+    margin-right: 63px;
+}

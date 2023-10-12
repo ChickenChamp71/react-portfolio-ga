@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Main from "./pages/Main";
 import Resume from "./pages/Resume";
-import Navigation from "./Navigation";
 import Footer from "./Footer";
 import "../styles/Container.css";
 
@@ -42,7 +41,7 @@ export default function Container() {
             return <Resume />
         }
 
-        return <Main handleFailState={handleFailState} handleSuccessState={handleSuccessState} notifState={notifState} checkVisibility={checkVisibility} />
+        return <Main handleFailState={handleFailState} handleSuccessState={handleSuccessState} notifState={notifState} checkVisibility={checkVisibility} isVisible={isVisible} handlePageChange={handlePageChange} />
 
     };
 
@@ -160,7 +159,6 @@ export default function Container() {
             </nav>
 
             <div className="page-render">
-                <Navigation notifState={notifState} handlePageChange={handlePageChange} isVisible={isVisible} />
                 {renderPage()}
             </div>
 

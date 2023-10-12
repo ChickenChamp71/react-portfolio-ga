@@ -7,7 +7,7 @@ export default function Navigation({  handlePageChange, notifState, isVisible })
         <header className={`navigation ${notifState? 'dialog' : ''} ${isVisible? 'header' : 'not-header'}`}>
             <nav className='nav-bar'>
                 <ul className='nav-options'>
-                    <li className='about-header'>
+                    <li id='about-header'>
                         <a
                             href='#about-me'
                             onClick={() => handlePageChange('Main')}
