@@ -16,6 +16,10 @@ hr {
     margin-top: 15px;
 }
 
+.header-space-fill.false {
+    height: 66px;
+}
+
 .p-center-div {
     display: flex;
     flex-direction: column;

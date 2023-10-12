@@ -1,7 +1,15 @@
+.navigation {
+    z-index: 4;
+}
+
 .nav-options {
     display: flex;
     justify-content: center;
     margin: 24px 0px 17px 0px;
+}
+
+.nav-options li {
+    z-index: 5;
 }
 
 .nav-options li a {
@@ -14,4 +22,32 @@
 #portfolio-header,
 #contact-header {
     margin-right: 63px;
+}
+
+.navigation.false {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation.false .bg-animation-bar {
+    background-color: var(--bg-color);
+    height: 81px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation-name: nav-slide-false;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nav-slide-false {
+    from {
+        width: 0;
+    }
+    
+    to {
+        width: 100%;
+    }
 }

@@ -4,8 +4,9 @@ import '../styles/Navigation.css';
 export default function Navigation({  handlePageChange, notifState, isVisible }) {
 
     return (
-        <header className={`navigation ${notifState? 'dialog' : ''} ${isVisible? 'header' : 'not-header'}`}>
+        <header className={`navigation ${notifState? 'dialog' : ''} ${isVisible? 'true' : 'false'}`}>
             <nav className='nav-bar'>
+                <div className='bg-animation-bar' />
                 <ul className='nav-options'>
                     <li id='about-header'>
                         <a

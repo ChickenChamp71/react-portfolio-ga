@@ -4,3 +4,9 @@ h2 {
     color: var(--main-font);
     margin-top: 27px;
 }
+
+.project-card-div {
+    margin: 25px 0px 48px 0px;
+    display: flex;
+    justify-content: center;
+}

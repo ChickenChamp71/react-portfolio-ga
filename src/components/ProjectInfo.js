@@ -4,7 +4,7 @@ const projectInfo = [
         title: 'Title 1',
         titleLink: 'https://youtube.com',
         description: 'Desc 1',
-        img: 'https://placekitten.com/500/200',
+        img: 'https://placekitten.com/325/193',
         imgDesc: 'Img desc 1',
         githubLink: 'https://github.com/GabrielAndersonDev'
     },
@@ -13,7 +13,7 @@ const projectInfo = [
         title: 'Title 2',
         titleLink: 'https://youtube.com',
         description: 'Desc 2',
-        img: 'https://placekitten.com/500/200',
+        img: 'https://placekitten.com/325/193',
         imgDesc: 'Img desc 2',
         githubLink: 'https://github.com/GabrielAndersonDev'
     },
@@ -22,7 +22,7 @@ const projectInfo = [
         title: 'Title 3',
         titleLink: 'https://youtube.com',
         description: 'Desc 3',
-        img: 'https://placekitten.com/500/200',
+        img: 'https://placekitten.com/325/193',
         imgDesc: 'Img desc 3',
         githubLink: 'https://github.com/GabrielAndersonDev'
     },
@@ -31,7 +31,7 @@ const projectInfo = [
         title: 'Title 4',
         titleLink: 'https://youtube.com',
         description: 'Desc 4',
-        img: 'https://placekitten.com/500/200',
+        img: 'https://placekitten.com/325/193',
         imgDesc: 'Img desc 4',
         githubLink: 'https://github.com/GabrielAndersonDev'
     },
