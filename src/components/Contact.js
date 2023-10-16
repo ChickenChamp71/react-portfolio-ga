@@ -136,13 +136,9 @@ export default function Contact({ handleFailState, handleSuccessState, notifStat
 
         if (!errTrue.name && !errTrue.email && !errTrue.subject && !errTrue.message) {
 
-            console.log('chekc 1 2 3')
-
             var xml = new XMLHttpRequest();
             
-            xml.open("POST", "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf1XaEdUL4RVONh9bzPDyq3GoOmiXB1PeoUXlez5gtcMBqt1A/formResponse")
-            
-            xml.send(JSON.stringify({ name: 'entry.1560707200', value: name }, { name: 'entry.547367803', value: email }, { name: 'entry.1792417998', value: subject }, { name: 'entry.73408052', value: message }));
+            xml.open("GET", `https://script.google.com/macros/s/AKfycbzcIe09tZFwDL9CL0p8f-6uexTWdKL3VjSqiRz1JlwZq5dhKEp_Rb4ehU_wQf-CQt3f/exec?name=${name}&email=${email}&subject=${subject}&message=${message}`);
 
             setName('');
             setEmail('');

@@ -6,7 +6,10 @@ export default function Navigation({  handlePageChange, notifState, isVisible })
     return (
         <header className={`navigation ${notifState? 'dialog' : ''} ${isVisible? 'true' : 'false'}`}>
             <nav className='nav-bar'>
-                <div className='bg-animation-bar' />
+                <div className='bg-animation-container'>
+                    <div className='bg-animation-bar' />
+                </div>
+    
                 <ul className='nav-options'>
                     <li id='about-header'>
                         <a

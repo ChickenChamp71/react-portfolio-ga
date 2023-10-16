@@ -16,6 +16,10 @@ hr {
     margin-top: 15px;
 }
 
+#below-nav {
+    margin-top: 25px;
+}
+
 .header-space-fill.false {
     height: 66px;
 }

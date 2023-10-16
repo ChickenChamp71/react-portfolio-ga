@@ -23,7 +23,7 @@ export default function Main({ handleFailState, handleSuccessState, notifState, 
                 <hr ref={ref} />
                 <div className={`header-space-fill ${isVisible? 'true' : 'false'}`} />
                 <Navigation notifState={notifState} handlePageChange={handlePageChange} isVisible={isVisible} />
-                <hr />
+                <hr id="below-nav" />
                 <div className="p-center-div">
                     <p className="about-me-p" id="about-p-1">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius fringilla lorem sed tempor. Sed vitae laoreet dui. Vestibulum aliquam hendrerit nibh ut pharetra. Duis accumsan mollis nisl, in porttitor mauris. Vivamus finibus venenatis est id facilisis. Pellentesque aliquet sapien non dictum lobortis. Nunc tempus ut nisl eu blandit. Pellentesque a odio vel mauris consectetur pellentesque vitae in odio.

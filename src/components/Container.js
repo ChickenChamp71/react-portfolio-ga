@@ -38,7 +38,7 @@ export default function Container() {
     const renderPage = () => {
 
         if (currentPage === 'Resume') {
-            return <Resume />
+            return <Resume handlePageChange={handlePageChange} notifState={notifState} isVisible={isVisible} />
         }
 
         return <Main handleFailState={handleFailState} handleSuccessState={handleSuccessState} notifState={notifState} checkVisibility={checkVisibility} isVisible={isVisible} handlePageChange={handlePageChange} />

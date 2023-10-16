@@ -1,18 +1,22 @@
 import React from "react";
 import resume from '../downloads/gabriel-anderson-resume.pdf';
+import Navigation from "../Navigation";
 
-export default function Resume() {
+export default function Resume({ handlePageChange, notifState, isVisible }) {
 
     return (
 
-        <main className="main-body">
+        <main className="main-body" id="resume">
+
+            <Navigation handlePageChange={handlePageChange} notifState={notifState} isVisible={isVisible} />
+
             <section className="download-section">
                 <button className="download-btn" download={resume}>
                     Download Resume
                 </button>
             </section>
 
-            <section className="main-resume" id="resume">
+            <section className="main-resume">
                 <h1 id="resume-name">
                     GABRIEL ANDERSON
                 </h1>

@@ -31,23 +31,33 @@
     width: 100%;
 }
 
+.bg-animation-container {
+    display: flex;
+    justify-content: center;
+}
+
 .navigation.false .bg-animation-bar {
     background-color: var(--bg-color);
-    height: 81px;
+    height: 90px;
     position: fixed;
     top: 0;
-    left: 0;
     animation-name: nav-slide-false;
-    animation-duration: 0.5s;
+    animation-duration: 0.3s;
     animation-fill-mode: forwards;
+}
+
+.navigation.false .nav-options {
+    margin: 31px 0px 17px 0px;
 }
 
 @keyframes nav-slide-false {
     from {
         width: 0;
+        background-color: transparent;
     }
     
     to {
         width: 100%;
+        background-color: var(--bg-color);
     }
 }

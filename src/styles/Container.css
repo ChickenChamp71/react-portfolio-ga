@@ -19,7 +19,7 @@ html {
 
 .body {
     background-color: var(--front-bg);
-    height: fit-content;
+    height: auto;
     width: 1300px;
 }
 
