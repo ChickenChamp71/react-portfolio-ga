@@ -1,6 +1,7 @@
 const projectInfo = [
     {
         key: 1,
+        id: 1,
         title: 'Title 1',
         titleLink: 'https://youtube.com',
         description: 'Desc 1',
@@ -10,6 +11,7 @@ const projectInfo = [
     },
     {
         key: 2,
+        id: 2,
         title: 'Title 2',
         titleLink: 'https://youtube.com',
         description: 'Desc 2',
@@ -19,6 +21,7 @@ const projectInfo = [
     },
     {
         key: 3,
+        id: 3,
         title: 'Title 3',
         titleLink: 'https://youtube.com',
         description: 'Desc 3',
@@ -28,6 +31,7 @@ const projectInfo = [
     },
     {
         key: 4,
+        id: 4,
         title: 'Title 4',
         titleLink: 'https://youtube.com',
         description: 'Desc 4',

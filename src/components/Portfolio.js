@@ -16,6 +16,7 @@ export default function Portfolio() {
                 <div className='project-card-div' key={project.key}>
                     <ProjectCard
                         key={project.key}
+                        id={project.id}
                         title={project.title}
                         titleLink={project.titleLink}
                         description={project.description}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { validateEmail } from '../utils/helpers';
+import { validateEmail, removeSpaces } from '../utils/helpers';
 
 export default function Contact({ handleFailState, handleSuccessState, notifState }) {
 
@@ -136,9 +136,14 @@ export default function Contact({ handleFailState, handleSuccessState, notifStat
 
         if (!errTrue.name && !errTrue.email && !errTrue.subject && !errTrue.message) {
 
-            var xml = new XMLHttpRequest();
+            setName(removeSpaces(name));
+            setSubject(removeSpaces(subject));
+            setMessage(removeSpaces(message));
             
-            xml.open("GET", `https://script.google.com/macros/s/AKfycbzcIe09tZFwDL9CL0p8f-6uexTWdKL3VjSqiRz1JlwZq5dhKEp_Rb4ehU_wQf-CQt3f/exec?name=${name}&email=${email}&subject=${subject}&message=${message}`);
+            fetch(`https://script.google.com/macros/s/AKfycbxDnoolt3f4Y5dFy_YXWF_3fEDT1nxQgH-ZhgAKCMslE1OKb52rBkOEI9b-aBFq1g9B/exec?name=${name}&email=${email}&subject=${subject}&message=${message}`)
+            .catch((err) => {
+                console.log(err)
+            });
 
             setName('');
             setEmail('');

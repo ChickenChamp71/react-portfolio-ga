@@ -38,12 +38,24 @@
 
 .navigation.false .bg-animation-bar {
     background-color: var(--bg-color);
-    height: 90px;
+    height: 100px;
     position: fixed;
     top: 0;
     animation-name: nav-slide-false;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
+    box-shadow: 0px 0px 4px 4px var(--box-shadow);
+}
+
+.navigation.true .bg-animation-bar {
+    background-color: var(--bg-color);
+    height: 100px;
+    position: fixed;
+    top: 0;
+    animation-name: nav-slide-true;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    box-shadow: 0px 0px 4px 4px var(--box-shadow);
 }
 
 .navigation.false .nav-options {
@@ -59,5 +71,18 @@
     to {
         width: 100%;
         background-color: var(--bg-color);
+    }
+}
+
+@keyframes nav-slide-true {
+    from {
+        width: 100%;
+        background-color: var(--bg-color);
+    }
+    
+    to {
+        width: 0;
+        background-color: transparent;
+        box-shadow: none;
     }
 }

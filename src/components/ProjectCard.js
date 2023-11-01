@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import githubLogo from "../styles/imgs/github-logo.png";
 import "../styles/PortfolioCard.css";
 
 const ProjectCard = (props) => {
-    const { title, titleLink, description, img, imgDesc, githubLink } = props;
+    const { id, title, titleLink, description, img, imgDesc, githubLink } = props;
+    const [isTarget, setTarget] = useState(false);
+
+    useEffect(() => {
+        let handler = (e) => {
+
+            if (e.target.id === id) {
+                setTarget(true);
+                return;
+            }
+        }
+    })
 
     return (
 
-        <section className="project-card">
+        <section className="project-card" id={id}>
 
             <img src={img} alt={imgDesc} className="card-img" />
 
